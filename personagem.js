@@ -38,6 +38,8 @@ function showCharacterInfo(){
 
    iframe.addEventListener('playing', function() {
        $('.carousel').carousel('pause');
+       $('.carousel-control-prev, .carousel-control-next').attr('disabled', true);
+
    });
 
    embedContainer.appendChild(iframe);
