@@ -84,3 +84,7 @@ window.onbeforeunload = function () {
 
 window.onload = showCharacterInfo;
 
+
+
+window.onload = showCharacterInfo;
+
