@@ -1,5 +1,6 @@
+<p align="center">
 ![Logo](comicseek.svg)
-
+</p>
 Este projeto permite que os usuários pesquisem seus personagens de quadrinhos favoritos e obtenham informações detalhadas sobre eles, incluindo vídeos informativos. Foram utilizadas as APIs do Comicvine, para receber informações e pesquisar sobre o personagem, e a do youtube para exibição de vídeos sobre o mesmo.
 
 ## Tecnologias Utilizadas
