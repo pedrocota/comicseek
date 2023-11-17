@@ -1,4 +1,5 @@
-##COMICSEEK
+## Comicseek
+
 
 Este projeto permite que os usuários pesquisem seus personagens de quadrinhos favoritos e obtenham informações detalhadas sobre eles, incluindo vídeos informativos.
 
