@@ -1,29 +1,26 @@
 function showCharacterInfo(){
 
-    var characterData = JSON.parse(localStorage.getItem('selectedCharacter'));    
-    var infoCard = document.querySelector(".card");
-
-
-
-    infoCard.querySelector(".card-img-top").src = characterData['image']['medium_url'];
-    infoCard.querySelector(".card-title").textContent = characterData['name'];
-    infoCard.querySelector(".list-group-item:nth-child(1)").textContent = characterData['real_name'];
-    infoCard.querySelector(".list-group-item:nth-child(2)").textContent = characterData['publisher']['name'];
-    infoCard.querySelector(".card-text").textContent = characterData['deck'];
-    // Show the infoContainer
-    descriptionContainer.querySelector("#descriptionText").innerHTML = characterData['description'];
-    descriptionContainer.style.display = 'flex';
+   var characterData = JSON.parse(localStorage.getItem('selectedCharacter'));    
+   var infoCard = document.querySelector(".card");
+    
+   infoCard.querySelector(".card-img-top").src = characterData['image']['medium_url'];
+   infoCard.querySelector(".card-title").textContent = characterData['name'];
+   infoCard.querySelector(".list-group-item:nth-child(1)").textContent = characterData['real_name'];
+   infoCard.querySelector(".list-group-item:nth-child(2)").textContent = characterData['publisher']['name'];
+   infoCard.querySelector(".card-text").textContent = characterData['deck'];
+   descriptionContainer.querySelector("#descriptionText").innerHTML = characterData['description'];
+   descriptionContainer.style.display = 'flex';
   
-    var keyword = characterData['name'] + " lore";
-    var apiKey = 'AIzaSyCw5Zf-UxQ81Klzz3fAzUmUrjsLcgy27uE';
-    console.log(keyword)
-    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${keyword}&key=${apiKey}`)
-    .then(response => response.json())
-    .then(data => {
+   var keyword = characterData['name'] + " lore";
+   var apiKey = 'AIzaSyCw5Zf-UxQ81Klzz3fAzUmUrjsLcgy27uE';
+   console.log(keyword)
+   fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${keyword}&key=${apiKey}`)
+   .then(response => response.json())
+   .then(data => {
 
-  var indicatorsContainer = document.querySelector('.carousel-indicators');
+   var indicatorsContainer = document.querySelector('.carousel-indicators');
 
- data.items.forEach((item, index) => {
+   data.items.forEach((item, index) => {
    const videoId = item.id.videoId;
 
    var carouselItem = document.createElement('div');
@@ -39,13 +36,10 @@ function showCharacterInfo(){
    iframe.addEventListener('playing', function() {
        $('.carousel').carousel('pause');
        $('.carousel-control-prev, .carousel-control-next').attr('disabled', true);
-
    });
 
    embedContainer.appendChild(iframe);
-
    carouselItem.appendChild(embedContainer);
-
    document.querySelector('.carousel-inner').appendChild(carouselItem);
 
    var indicator = document.createElement('li');
@@ -58,22 +52,14 @@ function showCharacterInfo(){
    indicatorsContainer.appendChild(indicator);
 });
 
-// Initialize the carousel after the videos have been added
 $('.carousel').carousel();
 })
 .catch(error => console.error('Error fetching YouTube data:', error));
-
-
 }
-
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
-  }
-
-window.onload = showCharacterInfo;
-
-
+}
 
 window.onload = showCharacterInfo;
 
