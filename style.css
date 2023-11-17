@@ -206,16 +206,25 @@ perspective: 1000px;
     margin-bottom: 0;
   }
 
-  .form-inline .form-control {
+  #formulario {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   align-content: center;
   text-align: -webkit-center;
+  }
+  .botaoPesquisa{
+    margin-top: 10px;
+    padding-top:10px;
+    line-height:2px;
+    
+  }
+
+    .btn {
+    margin-top: 5px;
+  
 }
 
-  .botaoPesquisa{
-  margin-top: 10px;
- }
 }
+
