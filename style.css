@@ -200,4 +200,18 @@ perspective: 1000px;
     width: 100%;
     max-width:100%;
   }
+
+  #coluna { 
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .form-inline .form-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: -webkit-center;
+}
 }
