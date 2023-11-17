@@ -19,7 +19,7 @@ function recuperaDados(event){
     }
   };
   
-  req.open('GET', "https://corsproxy.io/?https://comicvine.gamespot.com/api/search/?api_key=8629b2b179918dadbedac326f562a75511a48094&format=json&resources=character&query=" + nomePersonagem.value);
+  req.open('GET', "https://corsproxy.io/?https://comicvine.gamespot.com/api/search/?api_key=8629b2b179918dadbedac326f562a75511a48094&format=json&resources=character&query=" + nomePersonagem.value + "&sort=popularity");
   req.send(null);
 }
 
