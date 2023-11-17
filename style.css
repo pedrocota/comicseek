@@ -214,4 +214,8 @@ perspective: 1000px;
   align-content: center;
   text-align: -webkit-center;
 }
+
+  .botaoPesquisa{
+  margin-top: 10px;
+ }
 }
