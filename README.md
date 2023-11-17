@@ -13,7 +13,7 @@ Este projeto permite que os usuários pesquisem seus personagens de quadrinhos f
 
 ## Como Usar
 
-1. Abra o arquivo `index.html` em seu navegador.
+1. Caso tenha baixado, abra o arquivo `index.html` em seu navegador. Caso contrário, acesse `https://pedrocota.github.io`.
 2. Digite o nome do personagem que você está procurando na barra de pesquisa.
 3. Clique no botão de pesquisa para ver os resultados.
 4. Clique em qualquer um dos resultados nos resultados para ver mais detalhes.
