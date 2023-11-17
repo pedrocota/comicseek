@@ -16,10 +16,10 @@ for (var i = 0; i < results.length; i++) {
     card.querySelector("#characterId").textContent = result['id']; // Store the character id
    
     card.querySelector("img").src = result['image']['medium_url'];
-    card.querySelector(".card-title").textContent = result['name'];
-    card.querySelector(".list-group-item:nth-child(1)").innerHTML += result['real_name'];
-    card.querySelector(".list-group-item:nth-child(2)").innerHTML += result['publisher']['name'];
-    card.querySelector(".card-text").textContent += result['deck'];
+    card.querySelector(".card-title").textContent = result['name'] || "Desconhecido";
+    card.querySelector(".list-group-item:nth-child(1)").innerHTML += result['real_name'] || "Desconhecido";
+    card.querySelector(".list-group-item:nth-child(2)").innerHTML += result['publisher']['name'] || "Desconhecido";
+    card.querySelector(".card-text").textContent += result['deck'] || "Desconhecido";
    
     var col = document.createElement('div');
     col.className = 'col';
