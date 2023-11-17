@@ -4,14 +4,14 @@ function showCharacterInfo(){
    var infoCard = document.querySelector(".card");
     
    infoCard.querySelector(".card-img-top").src = characterData['image']['medium_url'];
-   infoCard.querySelector(".card-title").textContent = characterData['name'];
-   infoCard.querySelector(".list-group-item:nth-child(1)").textContent = characterData['real_name'];
-   infoCard.querySelector(".list-group-item:nth-child(2)").textContent = characterData['publisher']['name'];
-   infoCard.querySelector(".card-text").textContent = characterData['deck'];
-   descriptionContainer.querySelector("#descriptionText").innerHTML = characterData['description'];
+   infoCard.querySelector(".card-title").textContent = characterData['name'] || "Desconhecido";
+   infoCard.querySelector(".list-group-item:nth-child(1)").textContent = characterData['real_name'] || "Desconhecido";
+   infoCard.querySelector(".list-group-item:nth-child(2)").textContent = characterData['publisher']['name'] || "Desconhecido";
+   infoCard.querySelector(".card-text").textContent = characterData['deck'] || "Desconhecido";
+   descriptionContainer.querySelector("#descriptionText").innerHTML = characterData['description'] || "Desconhecido";
    descriptionContainer.style.display = 'flex';
   
-   var keyword = characterData['name'] + " lore";
+   var keyword = characterData['name'] + " " + characterData['publisher']['name'] + " lore";
    var apiKey = 'AIzaSyCw5Zf-UxQ81Klzz3fAzUmUrjsLcgy27uE';
    console.log(keyword)
    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${keyword}&key=${apiKey}`)
