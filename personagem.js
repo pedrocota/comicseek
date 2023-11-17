@@ -19,7 +19,7 @@ function showCharacterInfo(){
   
     // Show the info container
     var keyword = characterData['name'] + " lore";
-    var apiKey = 'AIzaSyAH5N1C9wBl39HdDfJKaxOtA6QpLctP_bU';
+    var apiKey = 'AIzaSyCw5Zf-UxQ81Klzz3fAzUmUrjsLcgy27uE';
     console.log(keyword)
     fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${keyword}&key=${apiKey}`)
     .then(response => response.json())
