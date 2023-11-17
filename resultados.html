@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Quadrinhos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="container-fluid">
+
+
+            <div class="row">
+                <div class="col-12 col-md-5 mx-auto" id="coluna">
+                <hr class="hr hr-blurry" />
+                <img src="imagens/comicseek.svg" alt="Your Image" id="logo" stroke="none" class="logo">
+                <hr class="hr hr-blurry" />
+
+
+              <div id="cardContainer">
+                <div id="cardTemplate" style="display: none;">
+                    <div class="card">
+                      <img src="..." class="card-img-top" alt="...">
+                      <p id="characterId" hidden></p> <!-- Make sure this line is present and correctly formatted -->
+
+                      <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Nome: </b></li>
+                        <li class="list-group-item"><b>Editora:</b></li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+              <button id="voltar" class="btn btn-default" onclick="window.history.back()">Voltar</button>
+
+          </div>
+        </div>
+
+          <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+          <script src="resultados.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
+      
