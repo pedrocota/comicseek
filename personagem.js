@@ -7,9 +7,21 @@ function showCharacterInfo() {
    infoCard.querySelector(".list-group-item:nth-child(1)").textContent = characterData['real_name'] || "Desconhecido";
    infoCard.querySelector(".list-group-item:nth-child(2)").textContent = characterData['publisher']['name'] || "Desconhecido";
    infoCard.querySelector(".card-text").textContent = characterData['deck'] || "Desconhecido";
-   descriptionContainer.querySelector("#descriptionText").innerHTML = characterData['description'] || "Desconhecido";
-   descriptionContainer.style.display = 'flex';
 
+      var description = characterData['description'] || "Desconhecido";
+   description = description.replace(/http(s)?:\/\/\S+/gi, function(url) {
+       return url.replace(/\./g, ' [dot] ').replace(/http/g, 'hxxp');
+   });
+
+      var description = characterData['description'] || "Desconhecido";
+   description = description.replace(/http(s)?:\/\/\S+/gi, function(url) {
+       return url.replace(/\./g, ' [dot] ').replace(/http/g, 'hxxp');
+   });
+
+   descriptionContainer.querySelector("#descriptionText").innerHTML = description;
+            
+   descriptionContainer.style.display = 'flex';
+   
    var keyword = characterData['name'] + " " + characterData['publisher']['name'] + " lore";
    var apiKey = 'AIzaSyCw5Zf-UxQ81Klzz3fAzUmUrjsLcgy27uE';
    console.log(keyword)
