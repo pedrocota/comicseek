@@ -37,6 +37,11 @@ body {
     font-family: helvetica;
     font-weight: bold;
   }
+
+  .middleCard{
+    height: 95% !important;
+  }
+  
   
   .card-text {
     margin-bottom: 0;
