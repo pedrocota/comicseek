@@ -210,7 +210,6 @@ perspective: 1000px;
   transition: box-shadow .25s;
   overflow-y: auto; 
   max-height: 500px;
-  pointer-events: none;
   cursor: default;
   color: black;
   text-decoration: none;
