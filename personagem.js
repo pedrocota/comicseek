@@ -13,11 +13,7 @@ function showCharacterInfo() {
        return url.replace(/\./g, ' [dot] ').replace(/http/g, 'hxxp');
    });
 
-      var description = characterData['description'] || "Desconhecido";
-   description = description.replace(/http(s)?:\/\/\S+/gi, function(url) {
-       return url.replace(/\./g, ' [dot] ').replace(/http/g, 'hxxp');
-   });
-
+ 
    descriptionContainer.querySelector("#descriptionText").innerHTML = description;
             
    descriptionContainer.style.display = 'flex';
